@@ -31,7 +31,8 @@
  * @return bool
  */
 function xmldb_repository_imagehub_install() {
-    global $DB;
+    global $CFG, $DB;
+    require_once($CFG->dirroot . '/repository/imagehub/lib.php');
     $recordid = $DB->insert_record('repository_imagehub_sources', [
         'title' => 'Manual',
         'type' => repository_imagehub::SOURCE_TYPE_MANUAL_VALUE,
