@@ -32,6 +32,8 @@ $url = new moodle_url('/repository/imagehub/managesources.php', []);
 $PAGE->set_url($url);
 $PAGE->set_context(context_system::instance());
 
+require_capability('repository/imagehub:managerepositories', $PAGE->context);
+
 $PAGE->set_heading(get_string('managesources', 'repository_imagehub'));
 echo $OUTPUT->header();
 

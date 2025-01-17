@@ -83,7 +83,7 @@ class repository_imagehub extends repository {
     /**
      * Search for files.
      *
-     * @param string $search_text
+     * @param string $search
      * @param int $page
      * @return void
      */
@@ -206,7 +206,7 @@ class repository_imagehub extends repository {
      */
     public static function type_config_form($mform, $classname = 'repository_imagehub') {
         $type = repository::get_type_by_typename('imagehub');
-        
+
         // Link to managesources.
         if ($type !== null) {
             $url = new moodle_url('/repository/imagehub/managesources.php');
